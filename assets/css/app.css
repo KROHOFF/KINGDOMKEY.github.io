@@ -131,6 +131,33 @@ button{
 
 }
 
+table{
+    width: 100%;
+    text-align: center;
+}
+table caption{
+    color: var(--f-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+table td{
+    border-bottom: 1px solid #6e6e6e;
+    color: var(--text-primary);
+    min-width: 50px;
+    padding: 1rem 0;
+}
+table td a{
+    color: var(--f-tertiary);
+    font-weight: 600;
+}
+table td a:hover{
+    color: var(--f-secondary);
+    font-weight: 600;
+}
+
 @media screen and (max-width: 1920px) {
     header {
         display: flex;
@@ -146,6 +173,8 @@ button{
         z-index: 9999;
     }
 
+    
+
     .nav-primary {
         display: flex;
         flex-flow: row;
@@ -155,6 +184,9 @@ button{
         min-height: 3rem;
     }
 
+    .nav-primary nav ul li a{
+        padding: 0 1rem;
+    }
     .social,
     .nav-social {
         font-size: .8rem;
@@ -175,10 +207,6 @@ button{
         display: flex;
         flex-flow: row;
         
-    }
-
-    nav ul li a {
-        margin: 1rem;
     }
 
     .nav-secondary {
@@ -206,7 +234,10 @@ button{
 
     }
     .nav-horizontal li{
-        padding: .1rem 1rem;
+        
+    }
+
+    .nav-horizontal a{
         border-right: 1px solid #dbdbdb;
         border-left: 1px solid #ffffff;
         transition: .3s ease;
@@ -214,21 +245,14 @@ button{
         -moz-transition: .3s ease;
         -ms-transition: .3s ease;
         -o-transition: .3s ease;
-}
-    .nav-horizontal li:hover{
-        background-color: #ffffff;
-        padding: .1rem 1rem;
-        border-left: 1px solid #f0f0f0;
-        border-right: 1px solid #ffffff;
-    }
-
-    .nav-horizontal a{
         color: var(--text-secondary);
         font-family: var(--font-1);
         font-size: 1.6rem;
         font-weight: 800;
+        padding: 0 2rem;
     }
     .nav-horizontal a:hover{
+        background-color: #ffffff;
         color: var(--f-secondary);
     }
 
@@ -349,7 +373,6 @@ button{
         display: flex;
         width: 100%;
         justify-content: center;
-        margin-top: 2rem;
     }
 
     nav ul {
@@ -528,7 +551,7 @@ footer {
 
 .cards{
     display: flex;
-    flex-flow: row ;
+    flex-flow: row wrap ;
 }
 
 .card{
