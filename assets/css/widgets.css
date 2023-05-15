@@ -27,7 +27,6 @@
     display: flex;
     flex-flow: column;
     width: 100%;
-    height: auto;
 }
 
 .widgets{
