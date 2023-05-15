@@ -210,7 +210,6 @@ table td a:hover{
     }
     .nav-social {
         font-size: .8rem;
-        padding: 0 0 0 3rem;
         font-size: .4rem;
     }
 
@@ -235,6 +234,8 @@ table td a:hover{
 
     .nav-secondary {
         display: flex;
+        flex-flow: row-reverse;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
     }
@@ -252,6 +253,7 @@ table td a:hover{
     }
     .nav-horizontal{
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-between;
         background-color: var(--bg-tertiary);
         width: 100%;
@@ -407,7 +409,7 @@ table td a:hover{
 
     nav ul {
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
         text-align: center;
         letter-spacing: 0.4rem;
     }
@@ -421,6 +423,7 @@ table td a:hover{
     .social {
         display: flex;
         flex-flow: column;
+        justify-content: center;
         width: 100%;
     }
 
@@ -445,8 +448,17 @@ table td a:hover{
     }
 
     .nav-secondary {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         width: 100%;
-        max-height: 2rem;
+        padding: 0;
+    }
+    .nav-secondary .auth {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-secondary .auth ul {
@@ -455,15 +467,16 @@ table td a:hover{
     }
 
     .logo {
+        display: flex;
+        justify-content: center;
         width: 100%;
+        padding: 3rem 0 0 0;
     }
 
     .logo img {
         width: 200px;
         display: block;
-        margin-top: 30px;
         /* Ajusta la distancia desde la parte superior */
-        margin-left: 35%;
         /* Ajusta la distancia desde la izquierda */
     }
 
@@ -539,14 +552,10 @@ nav ul li a:hover {
 }
 
 .nav-secondary {
-    display: flex;
-    flex-flow: row-reverse;
-    align-items: center;
-    width: 100%;
+   
     backdrop-filter: blur(7px);
     background-color: rgba(0, 0, 0, 0.523);
     color: var(--f-tertiary);
-    padding: 0 0.5rem 0 0;
     /* border-bottom: var(--f-tertiary) .1rem solid; */
 }
 
