@@ -373,7 +373,6 @@ table td a:hover{
         height: auto;
     }
     .sidebar{
-        width: 30%;
         min-height: 25rem;   
         max-width: 25rem;     
         backdrop-filter: blur(8px);
@@ -383,7 +382,13 @@ table td a:hover{
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-}
+
+    }
+    .content{
+        width: 70%;
+    }
+    
+
 }
 
 @media screen and (max-width: 768px) {
@@ -396,13 +401,14 @@ table td a:hover{
 
     nav {
         display: flex;
+        flex-flow: row;
         width: 100%;
         justify-content: center;
     }
 
     nav ul {
         display: flex;
-        flex-flow: column;
+        flex-flow: row;
         text-align: center;
         letter-spacing: 0.4rem;
     }
@@ -468,6 +474,23 @@ table td a:hover{
         width: 100%;
         max-width: 768px;
         height: 1000px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .sidebar{
+        min-height: 100%;   
+        max-width: 100%;     
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.255);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        width: 100%;
     }
 }
 
@@ -551,7 +574,6 @@ nav ul li a:hover {
 .content {
     border-radius: 5px;
     backdrop-filter: blur(8px);
-    width: 70%;
     height: auto;
     margin: 0 1rem 0 0;
     border-radius: 2px;
