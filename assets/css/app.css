@@ -164,7 +164,7 @@ table caption{
 table td{
     border-bottom: 1px solid rgba(255, 255, 255, 0.169);
     color: var(--text-primary);
-    min-width: 50px;
+    min-width: 100%;
     padding: 1rem 0;
 }
 table td a{
@@ -176,15 +176,16 @@ table td a:hover{
     font-weight: 600;
 }
 
-@media screen and (min-width: 1024px)  and (max-width: 3840px) {
+@media screen and (min-width: 960px)  and (max-width: 3840px) {
     header {
         display: flex;
         flex-flow: column;
+        position: sticky;
+        top: 0;
+        left: 0;
         width: 100%;
-        backdrop-filter: blur(8px);
-        background-color: rgba(0, 0, 0, 0.383);
+        z-index: 9999;
     }
-
     .sticky-header {
         position: sticky;
         top: 0;
@@ -193,14 +194,10 @@ table td a:hover{
         z-index: 9999;
     }
 
-    
-
     .nav-primary {
-        display: flex;
         flex-flow: row;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
         min-height: 3rem;
     }
     .nav-primary .nav-p{
@@ -211,28 +208,6 @@ table td a:hover{
         display: flex;
         flex-flow: row;
     }
-    
-    .social{
-    }
-    .nav-social {
-        font-size: .8rem;
-        font-size: .4rem;
-    }
-
-    .nav-social ul {
-        display: flex;
-        flex-flow: row;
-    }
-
-    .nav-social ul li {
-        margin: 0 1rem;
-    }
-
-    .nav-social ul li a {
-        color: var(--f-secondary);
-    }
-    
-
 
     .nav-secondary {
         display: flex;
@@ -298,59 +273,7 @@ table td a:hover{
         scale: 1.1;
     }
 
-    .slider {
-        
-        position: relative;
-        width: 100%;
-        height: 210px;
-        overflow: hidden;
-
-    }
-
-    .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 2.6rem 0;
-    }
-
-    .slide .slide-title {
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-    }
-
-
-
-    .slide-title h2 {
-        font-family: var(--font-2);
-        color: white;
-        text-shadow: 0 0 5px white, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 75px white;
-        font-size: 1.5em;
-        text-transform: capitalize;
-    }
-
-    .slide-title h3 {
-        font-family: 'Cinzel', serif;
-        color: var(--f-secondary);
-        text-shadow: 0 0 5px hsla(15, 100%, 51%, 0.292), 0 0 20px #ff4d00, 0 0 60px #131313, 0 0 10px #131313, 0 0 40px #131313, 0 0 50px #131313, 0 0 55px #030303c7;
-        font-size: 3em;
-        text-transform: capitalize;
-    }
-
-    @keyframes slideAnimation {
-
-        0%,
-        33.3% {
-            opacity: 1;
-        }
-
-        66.6%,
-        100% {
-            opacity: 0;
-        }
-    }
+    
 
     .app {
         display: flex;
@@ -358,6 +281,7 @@ table td a:hover{
         width: 1450px;
         max-width: 1450px;
         height: auto;
+        justify-content: center;
     }
     .sidebar{
         max-width: 25rem;     
@@ -374,8 +298,34 @@ table td a:hover{
     
 
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1280px) {
+    .app {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        width: 960px;
+        max-width: 960px;
+        height: auto;
+    }
+    .sidebar{
+        max-width: 30%;     
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+    }
+    .content{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 960PX){
     header {
+
+        position: static;
+        top: 0;
+        left: 0;
         display: flex;
         flex-flow: column-reverse;
         min-height: 6rem;
@@ -491,6 +441,7 @@ table td a:hover{
         width: 768px;
         max-width: 768px;
         height: auto;
+        justify-content: center;
     }
 
     .content{
@@ -514,8 +465,6 @@ table td a:hover{
     }
 }
 
-/* @media screen and (max-width: 1024px) {} */
-
 /* @media screen and (max-width: 768px) {}
  */
 /* @media screen and (max-width: 480px) {}
@@ -535,6 +484,9 @@ table td a:hover{
 header {
     text-transform: uppercase;
     color: var(--text-primary);
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.383);
 }
 
 .nav-primary {
@@ -562,35 +514,27 @@ header {
     color: var(--text-primary);
 }
 
-/* End Header */
-
-.app {
-    margin: 0 auto;
+.social{
+}
+.nav-social {
+    font-size: .8rem;
+    font-size: .4rem;
 }
 
-.content {
-    border-radius: 5px;
-    height: auto;
-    margin: 0 1rem 0 0;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-
+.nav-social ul {
+    display: flex;
+    flex-flow: row;
 }
 
-footer {
-    margin: 5rem 0 0 0;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    min-height: 15rem;
-    background-color: var(--bg-primary);
+.nav-social ul li {
+    margin: 0 1rem;
 }
 
-/* EXTRA */
-    .nav-primary .nav-p{
+.nav-social ul li a {
+    color: var(--f-secondary);
+}
+
+.nav-primary .nav-p{
     display: inherit;
 }
 
@@ -649,6 +593,96 @@ footer {
 }
 
 
+
+
+/* End Header */
+
+.app {
+    margin: 0 auto;
+}
+
+.content {
+    border-radius: 5px;
+    height: auto;
+    margin: 0 1rem 0 0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+
+}
+
+footer {
+    margin: 5rem 0 0 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    min-height: 15rem;
+    background-color: var(--bg-primary);
+}
+
+
+
+.slider {
+        
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.6rem 0;
+}
+
+.slide .slide-title {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+
+
+.slide-title h2 {
+    font-family: var(--font-2);
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #ffffff, 0 0 75px white;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+.slide-title h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--f-secondary);
+    text-shadow: 0 0 5px hsla(15, 100%, 51%, 0.292), 0 0 20px #ff4d00, 0 0 60px #131313, 0 0 10px #131313, 0 0 40px #131313, 0 0 50px #131313, 0 0 55px #030303c7;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+
+@keyframes slideAnimation {
+
+    0%,
+    33.3% {
+        opacity: 1;
+    }
+
+    66.6%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* EXTRA */
 
 
 
