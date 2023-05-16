@@ -176,11 +176,13 @@ table td a:hover{
     font-weight: 600;
 }
 
-@media screen and (max-width: 1920px) {
+@media screen and (min-width: 1024px)  and (max-width: 3840px) {
     header {
         display: flex;
         flex-flow: column;
         width: 100%;
+        backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.383);
     }
 
     .sticky-header {
@@ -196,16 +198,20 @@ table td a:hover{
     .nav-primary {
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
         min-height: 3rem;
     }
-
-    .nav-primary nav ul li a{
-        padding: 0 1rem;
-        font-size: .8rem;
+    .nav-primary .nav-p{
+        display: flex;
     }
+
+    .nav-primary .nav-p ul{
+        display: flex;
+        flex-flow: row;
+    }
+    
     .social{
     }
     .nav-social {
@@ -226,11 +232,7 @@ table td a:hover{
         color: var(--f-secondary);
     }
     
-    nav ul {
-        display: flex;
-        flex-flow: row;
-        
-    }
+
 
     .nav-secondary {
         display: flex;
@@ -251,36 +253,7 @@ table td a:hover{
         border-bottom: 1px solid var(--bg-secondary);
 
     }
-    .nav-horizontal{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        background-color: var(--bg-tertiary);
-        width: 100%;
-
-    }
-    .nav-horizontal li{
-        
-    }
-
-    .nav-horizontal a{
-        border-right: 1px solid #dbdbdb;
-        border-left: 1px solid #ffffff;
-        transition: .3s ease;
-        -webkit-transition: .3s ease;
-        -moz-transition: .3s ease;
-        -ms-transition: .3s ease;
-        -o-transition: .3s ease;
-        color: var(--text-secondary);
-        font-family: var(--font-1);
-        font-size: 1.6rem;
-        font-weight: 800;
-        padding: 0 2rem;
-    }
-    .nav-horizontal a:hover{
-        background-color: #ffffff;
-        color: var(--f-secondary);
-    }
+    
 
     .nav-data{
         display: flex;
@@ -294,16 +267,27 @@ table td a:hover{
         font-weight: 600;
     }
 
-    .logo {
+    .nav-horizontal {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 100%
+    }
+
+    .nav-horizontal nav ul {
+        display: flex;
+        flex-flow: row;
+    }
+
+    .nav-primary .logo {
         width: auto;
         z-index: 99999;
+        
     }
 
     .logo img {
         display: block;
         width: 240px;
-        margin-left: 20px;
-        margin-top: -40px;
         transition: .3s ease;
         -webkit-transition: .3s ease;
         -moz-transition: .3s ease;
@@ -370,14 +354,13 @@ table td a:hover{
 
     .app {
         display: flex;
-        flex-flow: row;
+        flex-flow: row wrap;
         width: 1450px;
+        max-width: 1450px;
         height: auto;
     }
     .sidebar{
         max-width: 25rem;     
-        backdrop-filter: blur(8px);
-        background-color: rgba(255, 255, 255, 0.255);
         border-radius: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
@@ -391,33 +374,38 @@ table td a:hover{
     
 
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px){
     header {
         display: flex;
-        flex-flow: column;
+        flex-flow: column-reverse;
         min-height: 6rem;
         margin: 0 0 1rem 0;
-    }
-
-    nav {
-        display: flex;
-        flex-flow: row;
         width: 100%;
-        justify-content: center;
-    }
-
-    nav ul {
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        letter-spacing: 0.4rem;
+        backdrop-filter: blur(8px);
+        background-color: rgba(120, 120, 120, 0.383);
     }
 
     .nav-primary {
         display: flex;
         flex-flow: column;
+        justify-content: end;
+        align-items: center;
         width: 100%;
+        min-height: 3rem;
+    }
+    .nav-primary .nav-p{
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .nav-primary .nav-p ul{
+        display: flex;
+        flex-flow: column;
+        text-align: end;
     }
 
     .social {
@@ -429,22 +417,23 @@ table td a:hover{
 
     .nav-social {
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         width: 100%;
     }
 
     .nav-social ul {
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
+        justify-content: end;
+        text-align: end;
     }
 
     .nav-social ul li {
-        margin: 0 1rem;
     }
 
     .nav-social ul li a {
-        padding: 0 1rem;
+        padding: 0 .6rem;
     }
 
     .nav-secondary {
@@ -466,26 +455,42 @@ table td a:hover{
         flex-flow: row;
     }
 
-    .logo {
+
+    .nav-horizontal{
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-horizontal nav {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+    .nav-horizontal nav ul{
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+
+
+    .nav-primary .logo {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 3rem 0 0 0;
+    }
+    .nav-primary .logo img {
+
+        width: 40%;
     }
 
-    .logo img {
-        width: 200px;
-        display: block;
-        /* Ajusta la distancia desde la parte superior */
-        /* Ajusta la distancia desde la izquierda */
-    }
 
     .app {
         display: flex;
         flex-flow: column;
-        width: 100%;
+        width: 768px;
         max-width: 768px;
-        height: 1000px;
+        height: auto;
     }
 
     .content{
@@ -503,56 +508,42 @@ table td a:hover{
         -o-border-radius: 5px;
         width: 100%;
     }
+
+    .slider{
+        display: none;
+    }
 }
 
-@media screen and (max-width: 1024px) {}
+/* @media screen and (max-width: 1024px) {} */
 
 /* @media screen and (max-width: 768px) {}
  */
-@media screen and (max-width: 480px) {}
+/* @media screen and (max-width: 480px) {}
 
 @media screen and (max-width: 384px) {}
 
 @media screen and (max-width: 320px) {}
-
+ */
 /*  Home Header
 
     * - Header
-    * - nav-primary > social > nav-social > ul > li > a
+    * - .nav-p-primary > social > .nav-p-social > ul > li > a
     * - logo > img
-    * - nav > ul > li > a
+    * - .nav-p > ul > li > a
     
 */
 header {
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.383);
     text-transform: uppercase;
     color: var(--text-primary);
-    width: 100%;
 }
 
 .nav-primary {
-    padding: 0 5rem;
-}
-
-.nav-primary a {
-    color: var(--text-primary);
-}
-
-nav ul li a {
+    display: flex;
     width: 100%;
-    font-size: 1rem;
-    font-weight: 200;
-    border-bottom: 1px solid transparent;
-
 }
 
-nav ul li a:hover {
-    color: var(--f-tertiary);
-}
 
 .nav-secondary {
-   
     backdrop-filter: blur(7px);
     background-color: rgba(0, 0, 0, 0.523);
     color: var(--f-tertiary);
@@ -575,12 +566,10 @@ nav ul li a:hover {
 
 .app {
     margin: 0 auto;
-    padding: 0 0 4rem 0;
 }
 
 .content {
     border-radius: 5px;
-    backdrop-filter: blur(8px);
     height: auto;
     margin: 0 1rem 0 0;
     border-radius: 2px;
@@ -588,6 +577,7 @@ nav ul li a:hover {
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+
 }
 
 footer {
@@ -598,6 +588,68 @@ footer {
     min-height: 15rem;
     background-color: var(--bg-primary);
 }
+
+/* EXTRA */
+    .nav-primary .nav-p{
+    display: inherit;
+}
+
+.nav-primary .nav-p ul{
+    justify-content: center;
+}
+
+.nav-primary .nav-p ul li a {
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 200;
+    border-bottom: 1px solid transparent;
+    padding: 0 1rem;
+}
+
+.nav-primary .nav-p ul li a:hover {
+    color: var(--f-tertiary);
+}
+
+
+.nav-primary .logo {
+    display: flex;
+}
+
+
+.nav-horizontal li{
+    padding: 1rem;
+}
+
+.nav-horizontal a{
+    color: var(--text-secondary);
+    font-family: var(--font-1);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    border-radius: 0.5em;
+    background-color: #f2f2f2;
+    padding: .2rem 1rem;
+    border: 1px solid #f2f2f2;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    box-shadow: 6px 6px 12px #e0e0e0, -6px -6px 12px #fff;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+
+}
+.nav-horizontal a:hover{
+    box-shadow: -6px -6px 12px #e0e0e0, 6px 6px 12px #fff;
+    color: var(--f-secondary);
+}
+
+
+
 
 
 
@@ -786,6 +838,8 @@ footer {
     opacity: 90%;
 }
 
+/*  */
+
 
 .mt-20 {
     margin-top: 20rem;
@@ -817,3 +871,47 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+
+.blur-1{
+    backdrop-filter: blur(1px);
+}
+.blur-2{
+    backdrop-filter: blur(2px);
+}
+.blur-3{
+    backdrop-filter: blur(3px);
+}
+.blur-4{
+    backdrop-filter: blur(4px);
+}
+.blur-8{
+    backdrop-filter: blur(8px);
+}
+.blur-9{
+    backdrop-filter: blur(9px);
+}
+.blur-10{
+    backdrop-filter: blur(10px);
+}
+
+.bg-color-1{
+    background-color: rgba(0, 0, 0, 0.707);
+}
+.bg-color-2{
+    background-color: rgba(23, 23, 23, 0.561);
+}
+.bg-color-3{
+    background-color: rgba(126, 126, 126, 0.425);
+}
+.bg-color-4{
+    background-color: rgba(255, 106, 52, 0.536);
+}
+.bg-color-5{
+    background-color: rgba(0, 200, 255, 0.536);
+}
+.bg-color-white{
+    background-color: rgba(255, 255, 255, 0.878);
+}
+
+
