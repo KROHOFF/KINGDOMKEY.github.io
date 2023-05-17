@@ -1,26 +1,4 @@
-:root {
-  /* Background Color */
-  --bg-primary: #000;
-  --bg-secondary: #171717;
-  --bg-line: rgba(193, 193, 193, 0.157);
-  --bg-line-2: #aeaeae;
-  --bg-tertiary: #e7e7e7;
 
-  /* Font Color */
-  --text-primary: #f0f0f0;
-  --text-secondary: #2a2a2a;
-  --text-tertiary: #000;
-  --f-primary: #c3c3c3;
-  --f-secondary: #ff6a34;
-  --f-tertiary: #3cd5ff;
-
-  /* Font  */
-
-  --font-1: "Chathura", sans-serif;
-  --font-2: "Cinzel", serif;
-  --font-3: "Foldit", cursive;
-  --font-4: "Mukta", sans-serif;
-}
 .sidebar {
   display: flex;
   flex-flow: column;
