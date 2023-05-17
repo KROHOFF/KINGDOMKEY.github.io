@@ -15,8 +15,8 @@
   --text-secondary: #2a2a2a;
   --text-tertiary: #000;
   --f-primary: #c3c3c3;
-  --f-secondary: #ff6a34;
-  --f-tertiary: #3cd5ff;
+  --f-secondary: #ffd400 ;
+  --f-tertiary: #00b3ff;
 
   /* Font  */
 
@@ -35,7 +35,7 @@ form {
 }
 
 body {
-  background-image: url("../../assets/images/bg.png");
+  background-image: url("../../assets/images/bg-9.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -167,7 +167,7 @@ h5{
   font-family: var(--font-4);
   color: var(--text-primary);
   font-size: 1rem;
-  border-bottom: var(--f-tertiary) 1px solid;
+  border-bottom: var(--f-secondary) 1px solid;
   text-transform: uppercase;
 }
 
@@ -225,7 +225,7 @@ table tr:hover {
   border: none;
 }
 table td a {
-  color: var(--f-tertiary);
+  color: var(--f-secondary);
   font-weight: 600;
 }
 table td a:hover {
@@ -323,7 +323,7 @@ table td a:hover {
     -o-transition: 0.3s ease;
   }
   .logo img:hover {
-    scale: 1.1;
+    scale: 1.07;
   }
 
   .app {
@@ -626,7 +626,7 @@ header {
 }
 .nav-horizontal a:hover {
   box-shadow: -6px -6px 12px #e0e0e0, 6px 6px 12px #fff;
-  color: var(--f-tertiary);
+  color: var(--f-secondary);
 }
 
 /* End Header */
@@ -659,6 +659,7 @@ footer {
   width: 100%;
   height: 210px;
   overflow: hidden;
+  
 }
 
 .slide {
@@ -667,6 +668,7 @@ footer {
   left: 0;
   width: 100%;
   padding: 2.6rem 0;
+  
 }
 
 .slide .slide-title {
@@ -686,10 +688,9 @@ footer {
 
 .slide-title h3 {
   font-family: "Cinzel", serif;
-  color: var(--f-secondary);
-  text-shadow: 0 0 5px hsla(15, 100%, 51%, 0.292), 0 0 20px #ff4d00,
-    0 0 60px #131313, 0 0 10px #131313, 0 0 40px #131313, 0 0 50px #131313,
-    0 0 55px #030303c7;
+  color: var(--text-primary);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.194), 0 0 10px #ffffff4d, 0 0 20px #ffffff4d,
+  0 0 30px #ffffff4d, 0 0 40px #ffffff4d, 0 0 50px #ffffff4d, 0 0 75px white;
   font-size: 3em;
   text-transform: capitalize;
 }
@@ -771,15 +772,12 @@ footer {
 }
 
 .card-bottom {
-  margin: 0 0 6rem 0;
+  margin: 0 0 1rem 0;
 }
 .card-img {
-  display: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  max-height: 250px;
+  width: 100%; /* Ancho fijo del contenedor */
+  height: 350px; /* Alto fijo del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que exceda los límites del contenedor */
   transition: transform 0.5s ease;
   -webkit-transition: transform 0.5s ease;
   -moz-transition: transform 0.5s ease;
@@ -801,11 +799,10 @@ footer {
   opacity: 1;
 }
 .card-img img {
-  object-fit: cover;
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 100%;
+  width: 100%; /* Ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  object-position: center; /* Centra la imagen dentro del contenedor */
   transition: opacity 0.3s ease;
   -webkit-transition: opacity 0.3s ease;
   -moz-transition: opacity 0.3s ease;
@@ -987,6 +984,11 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.flex-center-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .flex-row {
   display: flex;
   flex-flow: row wrap;
@@ -996,6 +998,10 @@ footer {
 .flex-column {
   display: flex;
   flex-flow: column;
+}
+
+.t-a-center{
+  text-align: center;
 }
 
 .blur-1 {
@@ -1030,7 +1036,7 @@ footer {
   background-color: rgba(126, 126, 126, 0.425);
 }
 .bg-color-4 {
-  background-color: rgba(255, 106, 52, 0.536);
+  background-color: rgba(238, 255, 52, 0.536);
 }
 .bg-color-5 {
   background-color: rgba(0, 200, 255, 0.536);
@@ -1096,6 +1102,26 @@ footer {
 }
 .border-l-5{
     border-left: var(--f-secondary) 5px solid;
+
+}
+.border-b-1{
+    border-bottom: var(--f-secondary) 1px solid;
+
+}
+.border-b-2{
+    border-bottom: var(--f-secondary) 2px solid;
+
+}
+.border-b-3{
+    border-bottom: var(--f-secondary) 3px solid;
+
+}
+.border-b-4{
+    border-bottom: var(--f-secondary) 4px solid;
+
+}
+.border-b-5{
+    border-bottom: var(--f-secondary) 5px solid;
 
 }
 
