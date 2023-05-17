@@ -600,7 +600,7 @@ header {
 }
 
 .nav-horizontal li {
-  padding: 1rem;
+  padding: 1.7rem;
 }
 
 .nav-horizontal a {
@@ -626,7 +626,7 @@ header {
 }
 .nav-horizontal a:hover {
   box-shadow: -6px -6px 12px #e0e0e0, 6px 6px 12px #fff;
-  color: var(--f-secondary);
+  color: var(--f-tertiary);
 }
 
 /* End Header */
@@ -720,20 +720,9 @@ footer {
   flex-flow: column;
   width: 100%;
   padding: 0.5rem;
-  transition: transform 0.5s ease;
-  -webkit-transition: transform 0.5s ease;
-  -moz-transition: transform 0.5s ease;
-  -ms-transition: transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
+  
 }
 
-.card:hover{
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
-}
 .card .card-top {
   display: flex;
   flex-flow: column;
@@ -791,6 +780,21 @@ footer {
   width: 100%;
   height: 100%;
   max-height: 250px;
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+
+
+
+.card-img:hover{
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
 }
 
 .card-img:hover::after {
@@ -822,6 +826,10 @@ footer {
   max-width: 100px;
   text-align: center;
   font-weight: bold;
+}
+
+.card-date p{
+  color: var(--text-tertiary);
 }
 
 .card-detail {
