@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* Imports */
-@import url("https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&family=Cinzel:wght@400;500;600;700;800;900&family=Foldit:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap"); /* Root */
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chathura:wght@100;300;400;700;800&family=Cinzel:wght@400;500;600;700;800;900&family=Foldit:wght@100;200;300;400;500;600;700;800;900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mate+SC&family=Metrophobic&family=Mukta:wght@200;300;400;500;600;700;800&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 :root {
   /* Background Color */
   --bg-primary: #000;
@@ -23,7 +22,11 @@
   --font-1: "Chathura", sans-serif;
   --font-2: "Cinzel", serif;
   --font-3: "Foldit", cursive;
-  --font-4: "Mukta", sans-serif;
+  --font-4: 'Kanit', sans-serif;
+  --font-5: 'Bebas Neue', sans-serif;
+  --font-6: 'Mate SC', serif;
+  --font-7: 'Reem Kufi', sans-serif;
+  --font-8: 'Metrophobic', sans-serif;
 }
 
 /* CSS Document */
@@ -231,6 +234,82 @@ table td a {
 table td a:hover {
   color: var(--text-secondary);
   font-weight: 600;
+}
+
+
+/* Form */
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--f-primary);
+  font-family: var(--font-8);
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: .8rem;
+  padding: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+  width: 100%;
+  padding: .6rem;
+  margin-bottom: 10px;
+  border: 2px solid var(--bg-secondary);
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-size: .8rem;
+  color: var(--f-primary);
+  background-color: #00000052;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -ms-transition: .3s ease;
+  -o-transition: .3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+  color: var(--f-primary);
+  background-color: #e0e0e02d;
+  border: 2px solid var(--f-tertiary);
+
+}
+
+form button[type="submit"] {
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  font-size: 1rem;
+  font-family: var(--font-8);
+  padding: .6rem 0;
+}
+
+form button[type="submit"]:hover {
+  background-color: transparent;
+}
+
+form .error {
+  color: red;
+  margin-top: 5px;
 }
 
 @media screen and (min-width: 960px) and (max-width: 3840px) {
@@ -785,6 +864,21 @@ footer {
   -o-transition: transform 0.5s ease;
 }
 
+.card-img-full-h {
+  width: 100%; /* Ancho fijo del contenedor */
+  height: 800px; /* Alto fijo del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que exceda los límites del contenedor */
+}
+
+.card-img-full-h img {
+  width: 100%; /* Ancho de la imagen al 100% del contenedor */
+  height: 100%; /* Altura de la imagen al 100% del contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  object-position: center; /* Centra la imagen dentro del contenedor */
+
+}
+
+
 
 
 .card-img:hover{
@@ -908,6 +1002,9 @@ footer {
   margin-top: 1rem;
 }
 
+.m-1 {
+  margin: 1rem 0;
+}
 .m-2 {
   margin: 2rem 0;
 }
@@ -920,8 +1017,14 @@ footer {
 .w-7 {
   width: 70%;
 }
+.w-6 {
+  width: 60%;
+}
 .w-5 {
   width: 50%;
+}
+.w-4 {
+  width: 40%;
 }
 .w-3 {
   width: 30%;
@@ -930,6 +1033,9 @@ footer {
   width: 20%;
 }
 
+.p-0 {
+  padding: 0;
+}
 .p-1 {
   padding: 1rem;
 }
@@ -993,7 +1099,8 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch
+  
 }
 .flex-column {
   display: flex;
@@ -1002,6 +1109,12 @@ footer {
 
 .t-a-center{
   text-align: center;
+}
+.t-a-right{
+  text-align: right;
+}
+.t-a-left{
+  text-align: left;
 }
 
 .blur-1 {
@@ -1046,6 +1159,22 @@ footer {
 }
 .bg-color-black {
   background-color: rgba(0, 0, 0, 0.878);
+}
+
+.color-1{
+  color: #000;
+}
+.color-2{
+  color: #242424;
+}
+.color-3{
+  color: #f1f1f1;
+}
+.color-4{
+  color: #ffd400;
+}
+.color-5{
+  color: #00b3ff;
 }
 
 .br-1 {
@@ -1124,6 +1253,7 @@ footer {
     border-bottom: var(--f-secondary) 5px solid;
 
 }
+
 
 /* Profile */
 
@@ -1228,3 +1358,4 @@ footer {
 .profile-nav ul li a:hover{
   color: var(--f-tertiary);
 }
+
