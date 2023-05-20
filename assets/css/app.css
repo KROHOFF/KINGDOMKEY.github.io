@@ -15,7 +15,7 @@
   --text-tertiary: #000;
   --f-primary: #c3c3c3;
   --f-secondary: #ffd400 ;
-  --f-tertiary: #00b3ff;
+  --f-tertiary: #1855ff;
 
   /* Font  */
 
@@ -316,13 +316,12 @@ form .error {
   header {
     display: flex;
     flex-flow: column;
-    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
   }
-  .sticky-header {
+  .sticky {
     position: sticky;
     top: 0;
     left: 0;
@@ -612,13 +611,16 @@ header {
 .nav-primary {
   display: flex;
   width: 100%;
+  background: rgb(255,246,159);
+  background: radial-gradient(circle, rgba(255,246,159,0.15449929971988796) 1%, rgba(64,2,235,0.45702030812324934) 32%, rgba(0,9,255,0.2945553221288515) 81%, rgba(0,37,135,0.4962359943977591) 100%);
 }
 
 .nav-secondary {
   backdrop-filter: blur(7px);
   background-color: rgba(0, 0, 0, 0.523);
   color: var(--f-tertiary);
-  /* border-bottom: var(--f-tertiary) .1rem solid; */
+  /*border-bottom: var(--f-tertiary) .1rem solid;
+  */
 }
 
 .nav-secondary a {
@@ -1359,3 +1361,14 @@ footer {
   color: var(--f-tertiary);
 }
 
+.display-none{
+  display: none;
+  
+}
+.trs-3s{
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+}
