@@ -394,14 +394,6 @@ form .error {
   .logo img {
     display: block;
     width: 240px;
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-  }
-  .logo img:hover {
-    scale: 1.07;
   }
 
   .app {
@@ -1372,3 +1364,4 @@ footer {
   -ms-transition: .5s ease;
   -o-transition: .5s ease;
 }
+

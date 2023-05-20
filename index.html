@@ -8,6 +8,8 @@
         <!-- css -->
         <link rel="stylesheet" href="assets/css/app.css" />
         <link rel="stylesheet" href="assets/css/widgets.css" />
+        <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+
     </head>
     <header class="">
         <div class="nav-secondary">
@@ -28,8 +30,8 @@
             </div>
         </div>
         <div class="nav-primary ">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Logo-principal" />
+            <div class="logo animate__animated  animate__pulse">
+                <img id="logo" src="assets/images/logo.png" alt="Logo-principal" />
             </div>
             <nav class="nav-p">
                 <ul>
@@ -46,14 +48,14 @@
         <div class="slider m-5">
             <div class="slide">
                 <div class="slide-title">
-                    <h2>Avanza hacia la cima</h2>
-                    <h3>La llave está en tu camino</h3>
+                    <h2 class="animate__animated animate__fadeInDown">Avanza hacia la cima</h2>
+                    <h3 class="animate__animated animate__fadeInDownBig">La llave está en tu camino</h3>
                 </div>
             </div>
         </div>
         <div class="app">
             <div class="content blur-10 mr-1 ">
-                <div class="nav-horizontal bg-color-white">
+                <div class="nav-horizontal bg-color-white animate__animated animate__fadeInDown">
                     <nav>
                         <ul>
                             <li><a href="#">LoL</a></li>
@@ -67,7 +69,7 @@
                     </div>
                 </div>
                 <div class="cards bg-color-1 ">
-                    <div class="card w-10 ">
+                    <div class="card w-10 animate__animated animate__fadeInUp">
                         <div class="card-top">
                             <h4>Que comience la batalla</h4>
                         </div>
@@ -76,9 +78,9 @@
                         </div>
                     </div>
                 </div>
-                <h1 >Tournament</h1>
+                <h1 class="animate__animated animate__fadeInUpBig">Tournament</h1>
                 <div class="cards ">
-                    <div class="card w-5 bg-color-2">
+                    <div class=" card w-5 bg-color-2 animate__animated animate__slideInLeft ">
                         <div class="card-top">
                             <div class="card-date m-2">
                                 <p>01-01-2023</p>
@@ -109,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card w-5 ">
+                    <div class="card w-5 animate__animated animate__slideInRight">
                         <div class="card-top">
                             <div class="card-date m-2">
                                 <p>01-01-2023</p>
@@ -243,7 +245,7 @@
                 </div>
             </div>
             <div class="sidebar blur-8 bg-color-3">
-                <div class="widgets">
+                <div class="widgets animate__animated  animate__slideInUp">
                     <div class="widget">
                         <div class="widget-top">
                             <h2 class="border-l-1">Musica para jugar</h2>
