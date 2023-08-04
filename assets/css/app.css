@@ -907,6 +907,7 @@ header {
 
 .nav-primary .logo {
   display: flex;
+  z-index: 999;
 }
 
 .nav-horizontal li {
