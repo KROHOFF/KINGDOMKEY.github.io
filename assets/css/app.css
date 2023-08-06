@@ -153,9 +153,10 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-2);
-  font-size: 1rem;
+  font-family: var(--font-5);
+  font-size: 2.5rem;
   padding: .5rem 1rem;
+  letter-spacing: 3px;
 }
 
 h3 {
@@ -406,12 +407,7 @@ table {
   width: 100%;
   text-align: center;
   backdrop-filter: blur(8px);
-  background-color: rgba(255, 255, 255, 0.255);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
 }
 
 table caption {
@@ -441,7 +437,7 @@ table td a {
 }
 
 table td a:hover {
-  color: var(--color-2);
+  color: var(--color-7);
   font-weight: 600;
 }
 
@@ -970,7 +966,7 @@ footer {
 .slider {
   position: relative;
   width: 100%;
-  height: 750px;
+  height: 950px;
   overflow: hidden;
   display: flex;
   flex-flow: column;
@@ -1074,11 +1070,11 @@ footer {
 
 
 .card-top h2 a {
-  color: var(--color-4);
+  color: var(--color-2);
 }
 
 .card-top h2 a:hover {
-  color: var(--color-1);
+  color: var(--color-6);
 }
 
 .card-top h3 {
@@ -1168,9 +1164,8 @@ footer {
 .card-date {
   font-size: 0.9rem;
   color: var(--color-3);
-  background-color: var(--bg-5);
   padding: 0 1rem;
-  max-width: 100px;
+  max-width: 120px;
   text-align: center;
   font-weight: bold;
 }
@@ -1455,7 +1450,10 @@ footer {
 }
 
 .bg-color-4 {
-  background-color: rgba(238, 255, 52, 0.536);
+  background: #757F9A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D7DDE8, #afb7cc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D7DDE8, #afb7cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
 }
 
 .bg-color-5 {
@@ -1590,22 +1588,22 @@ footer {
 }
 
 .border-b-1 {
-  border-bottom: var(--color-5) 1px solid;
+  border-bottom: var(--color-1) 1px solid;
 
 }
 
 .border-b-2 {
-  border-bottom: var(--color-5) 2px solid;
+  border-bottom: var(--color-1) 2px solid;
 
 }
 
 .border-b-3 {
-  border-bottom: var(--color-5) 3px solid;
+  border-bottom: var(--color-1) 3px solid;
 
 }
 
 .border-b-4 {
-  border-bottom: var(--color-5) 4px solid;
+  border-bottom: var(--color-1) 4px solid;
 
 }
 
